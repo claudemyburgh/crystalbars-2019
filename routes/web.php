@@ -20,7 +20,7 @@
 Route::get('/', 'PagesController@index')->name('welcome');
 Route::get('/faq', 'PagesController@faq')->name('faq');
 Route::get('/photos', 'PagesController@photos')->name('photos');
-Route::get('/getimages', 'PagesController@getImages')->name('getImages');
+
 
 Auth::routes(['register' => false]);
 

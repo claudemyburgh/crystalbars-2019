@@ -39,7 +39,7 @@
         methods: {
 
             getImages () {
-                axios.get(`${this.url}/getimages`).then( (response) => {
+                axios.get(`${this.url}/api/getimages`).then( (response) => {
                     this.data = response.data
                 })
             }
