@@ -32,13 +32,14 @@
 
         data () {
             return {
-                data: ''
+                data: '',
+                url: appurl
             }
         },
         methods: {
 
             getImages () {
-                axios.get('http://127.0.0.1:8000/getimages').then( (response) => {
+                axios.get(`${this.url}/getimages`).then( (response) => {
                     this.data = response.data
                 })
             }
@@ -46,7 +47,7 @@
         },
         mounted() {
            this.getImages()
-           console.log(this.data)
+
         }
 
 

@@ -64,6 +64,12 @@
                 <img src="{{ asset('img/trailer.jpg') }}" alt="{{ config('app.name') }} Trailer" class="responsive__image image__shadow">
             </div>
         </div>
+        <div class="row">
+            <div class="col text-align-center">
+                <div class="spacer--xs"></div>
+                <a href="{{ route('photos') }}" class="btn btn--lg btn--primary-gradient"> <i class="btn__icon--left lunacon--size-x2 lunacon lunacon-camera"></i> VIEW GALLERY</a>
+            </div>
+        </div>
     </div>
 </section>
 

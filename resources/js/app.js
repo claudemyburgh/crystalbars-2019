@@ -37,7 +37,7 @@ window.Vue = require('vue');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('view-grid', require('./components/ViewGrid.vue'));
-Vue.component('mail-chimp', require('./components/MailChimp.vue'));
+// Vue.component('mail-chimp', require('./components/MailChimp.vue'));
 
 // Vue.component('admin-gallary', require('./components/AdminGallary.vue'));
 
