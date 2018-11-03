@@ -1,0 +1,124 @@
+@keyframes slide
+
+    0%, 100%
+        background-position: 0px 100%
+
+    30%
+        background-position: 500px 110%
+
+    40%
+        background-position: 300px 105%
+
+    60%
+        background-position: -200px 100%
+
+    850%
+        background-position: 300px 120%
+
+.profile__flex
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
+    +media-up(md)
+        flex-direction: row
+
+.profile
+    display: flex
+    min-height: 200px
+    background: $primary-color
+    background: linear-gradient(-45deg, $primary-color 100% 10%, darken($primary-color, 15%) 20%, mix(purple, $primary-color, 70% ) 10% 0%)
+    width: 100%
+    margin-bottom: 15px
+    flex-direction: column
+    font-weight: 600
+    filter: drop-shadow(rgba(#000, 0.2) 0 1px 2px)
+    transition: filter 0.25s ease
+    +radius
+
+
+    +media-up(md)
+        width: 50%
+        flex-direction: row
+
+
+    &:hover
+        filter: drop-shadow(rgba(#000, 0.3) 0 1px 10px)
+
+        img
+            transform: scale(1.1)
+
+    &:nth-child(1)
+        // background: red
+        +media-up(md)
+            margin-right: 15px
+
+
+    &__image
+        position: relative
+        overflow: hidden
+        +media-down(md)
+            width: 80px
+            height: 80px
+            +radius(100%)
+            border: solid 3px #fff
+            top: 30px
+            left: 30px
+        +media-up(md)
+            width: 40%
+
+        img
+
+            transition: transform 0.25s ease
+            +media-down(md)
+                width: 80px
+                position: relative
+                top: -5px
+            +media-up(md)
+                min-width: 200px
+                height: 100%
+                position: absolute
+                left: -40px
+
+    &__details
+        padding: 15px 30px
+        color: #fff
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+
+        &__list
+            padding: 0
+            mailto:info
+            list-style: none
+
+
+            a
+                color: #fff
+
+
+    &__section
+        position: relative
+        background-image: url('/img/bars.svg')
+        background-repeat: repeat-x
+        background-position-y: bottom
+        @extend .section--padding
+        animation: slide 20s ease-out infinite
+
+    &__wrapper
+        position: relative
+        z-index: 2
+        @extend .flex--wrapper
+
+
+#bars
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    display: block
+    background: #fff
+    z-index: 1

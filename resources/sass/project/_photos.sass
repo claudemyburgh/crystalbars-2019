@@ -1,0 +1,42 @@
+
+
+.grid
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 15px
+    grid-auto-flow: columns
+
+
+    &__item
+        background: pink
+        min-width: 300px
+
+
+.isotope
+
+    img
+        width: 100%
+        max-width: 100%
+        display: block
+
+    &--width
+        padding: 10px
+        display: block
+        +media-up(xs)
+            width: 50%
+        +media-up(sm)
+            width: 25%
+        +media-up(md)
+            width: 33.334%
+
+        +media-up(lg)
+            width: 25%
+
+
+        &-2
+            +media-up(sm)
+                width: 50%
+            +media-up(md)
+                width: 66.667%
+            +media-up(lg)
+                width: 50%

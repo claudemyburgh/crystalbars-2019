@@ -1,0 +1,21 @@
+@component('mail::message')
+
+# Hi, Luis and Hendry
+
+## {{ $name }} requested a quote from the {{ config('app.name') }} website.
+
+### There details
+    Name: {{ $name }}
+    Email: {{ $email }}
+    Phone: {{ $phone }}
+
+___
+
+{!! e(nl2br($message)) !!}
+
+___
+
+
+Thanks,<br>
+{{ config('app.name') }}
+@endcomponent
