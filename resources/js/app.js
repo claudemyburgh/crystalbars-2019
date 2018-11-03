@@ -6,6 +6,10 @@
  */
 
 require('./bootstrap');
+
+let appurl = document.head.querySelector('meta[name="app-url"]');
+
+window.appurl = appurl.content;
 const luna =  require('luna-sass/Framework/js/luna.js');
 import "babel-polyfill";
 

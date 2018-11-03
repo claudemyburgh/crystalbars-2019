@@ -40,7 +40,7 @@ class PagesController extends Controller
 
         $images = [];
 
-        $media = Media::limit(9)->get();
+        $media = Media::limit(12)->get();
 
         foreach ($media as $g) {
             $images[] .= $g->getFullUrl('mini');
