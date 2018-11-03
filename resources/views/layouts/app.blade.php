@@ -12,7 +12,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script language="JavaScript" defer src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    {{-- <script language="JavaScript" defer src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
