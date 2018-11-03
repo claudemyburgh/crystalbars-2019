@@ -16,14 +16,13 @@ class MailChimpController extends Controller
             'email' => 'required|email'
         ]);
 
-        return 'success';
-        // if ( ! Newsletter::isSubscribed($request->email) ) {
-        //     Newsletter::subscribe($request->email);
-        // }else{
-        //     return redirect()->back()->withNote('You are already subscribed to our newsletter');
-        // }
+        if ( ! Newsletter::isSubscribed($request->email) ) {
+            Newsletter::subscribe($request->email);
+        }else{
+            return redirect()->back()->withNote('You are already subscribed to our newsletter');
+        }
 
-        //     return redirect()->back()->withSuccess('Thank you for subscribed to our newsletter');
+            return redirect()->back()->withSuccess('Thank you for subscribed to our newsletter');
 
     }
 

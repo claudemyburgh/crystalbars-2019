@@ -24,9 +24,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+        @include('layouts.partials._facebook')
     <div id="app">
 
-        @include('layouts.partials._facebook')
 
         @include('layouts.partials._nav')
 
@@ -39,7 +39,7 @@
                 <div class="hero__wrapper">
                     <div class="row">
                         <div class="md-col-8">
-                            <h1>SECURE YOUR HOME AND BUSINESS WITH THE BEST TRANSPARENT BARS OUT THERE.</h1>
+                            <h1>SECURE YOUR HOME AND BUSINESS WITH THE BEST TRANSPARENT BURGLAR BARS OUT THERE.</h1>
                             <a href="{{ route('quote') }}" class="hero__button">{{ __('hero.get_quote') }}</a>
                         </div>
                     </div>
@@ -58,7 +58,8 @@
         <main class="main">
             @yield('content')
         </main>
-        <mail-chimp></mail-chimp>
+        {{-- <mail-chimp></mail-chimp> --}}
+
         @include('layouts.partials._profile')
         @include('layouts.partials._footer')
     </div><!-- #app -->

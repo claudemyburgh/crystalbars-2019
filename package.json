@@ -30,6 +30,7 @@
         "luna-sass": "^1.13.0",
         "path": "^0.12.7",
         "photoswipe": "^4.1.2",
-        "scrollmagic": "^2.0.6"
+        "scrollmagic": "^2.0.6",
+        "simplelightbox": "^1.15.0"
     }
 }

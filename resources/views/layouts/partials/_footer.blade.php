@@ -12,11 +12,14 @@
 <footer class="footer">
     <div class="wrapper">
         <div class="row">
-            <div class="md-col-6">
-                <h3>Footer Text</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed harum dolor, natus architecto. Quae dolores hic non voluptatibus facilis, aspernatur ducimus. Culpa, rem, id? Quo repellendus fuga quasi maiores ipsum!</p>
+            <div class="md-col-4">
+                <h3>Gallery</h3>
+                <a href="{{ route('photos') }}">
+                    <view-grid></view-grid>
+                </a>
+
             </div>
-            <div class="md-col-2">
+            <div class="md-col-4">
                     &nbsp;
             </div>
             <div class="md-col-4">

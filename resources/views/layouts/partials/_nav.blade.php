@@ -19,14 +19,11 @@
             <div class="nav__navicon"></div>
             <div class="nav__links__wrapper nav__links--right">
                 <ul class="nav__links">
-                    <li class="nav__links__item"><a href="{{ url('/') }}">{{ __('menu.home') }}</a></li>
-                    <li class="nav__links__item"><a href="{{ route('photos') }}">{{ __('menu.photos') }}</a></li>
+                    <li class="nav__links__item{{ return_if(on_page('/' ), ' nav__links__item--active') }} "><a href="{{ url('/') }}">{{ __('menu.home') }}</a></li>
+                    <li class="nav__links__item {{ return_if(on_page('photos' ), ' nav__links__item--active') }} "><a href="{{ route('photos') }}">{{ __('menu.photos') }}</a></li>
                     {{-- <li class="nav__links__item"><a href="{{ url('/') }}">{{ __('menu.testimonials') }}</a></li> --}}
-                    <li class="nav__links__item"><a href="{{ route('faq') }}">{{ __('menu.faq') }}</a></li>
+                    <li class="nav__links__item {{ return_if(on_page('faq' ), ' nav__links__item--active') }} "><a href="{{ route('faq') }}">{{ __('menu.faq') }}</a></li>
                 @guest
-    {{--                         <li class="nav__links__item"><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                    <li class="nav__links__item"><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
-    --}}
                 @else
                     <li class="nav__links__item nav__links__item--dropdown">
                     <a href="#">{{ Auth::user()->name }}</a>
@@ -40,7 +37,13 @@
                 </li>
 
                 @endguest
-                <li class="nav__links__button"><a class="btn btn--secondary-gradient pulse-button" href="{{ route('quote') }}">{{ __('menu.get_quote') }}</a></li>
+                <li class="nav__links__button">
+                    @if (!request()->is('quote'))
+                        <a class="btn btn--secondary-gradient pulse-button" href="{{ route('quote') }}">{{ __('menu.get_quote') }}</a>
+                    @else
+                        <button disabled class="btn">{{ strtoupper( __('menu.get_quote')) }}</button>
+                    @endif
+                </li>
                 </ul>
             </div>
         </div>

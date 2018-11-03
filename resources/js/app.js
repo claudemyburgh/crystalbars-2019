@@ -13,11 +13,13 @@ import "babel-polyfill";
 import TweenMax from 'gsap'
 import ScrollMagic from 'scrollmagic'
 
+
 require('animation.gsap');
 
 
 require('isotope-layout/dist/isotope.pkgd.js');
 require('imagesloaded');
+require('simplelightbox');
 
 
 // require('debug.addIndicators');
@@ -34,6 +36,7 @@ window.Vue = require('vue');
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('view-grid', require('./components/ViewGrid.vue'));
 Vue.component('mail-chimp', require('./components/MailChimp.vue'));
 
 // Vue.component('admin-gallary', require('./components/AdminGallary.vue'));
@@ -67,6 +70,8 @@ const app = new Vue({
         .addTo(controller);
 
     }
+
+    $('.isotope a').simpleLightbox();
 
 
     var $grid = $('.isotope').isotope({

@@ -20,12 +20,14 @@
 Route::get('/', 'PagesController@index')->name('welcome');
 Route::get('/faq', 'PagesController@faq')->name('faq');
 Route::get('/photos', 'PagesController@photos')->name('photos');
+Route::get('/getimages', 'PagesController@getImages')->name('getImages');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::view('/qoute', 'quote')->name('quote');
+
+Route::view('/quote', 'quote')->name('quote');
 
 
 Route::post('/send', 'SendMailController@send')->name('send');

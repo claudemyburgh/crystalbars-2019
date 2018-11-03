@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\Models\Media;
 use DesignByCode\MiniAdmin\Models\Gallery;
+
 
 class PagesController extends Controller
 {
@@ -29,6 +31,24 @@ class PagesController extends Controller
     {
         $galleries = Gallery::with('media')->get();
         return view('photos', compact('galleries'));
+    }
+
+
+    public function getImages()
+    {
+        // $gallery = Gallery::with('media')->first();
+
+        $images = [];
+
+        $media = Media::limit(9)->get();
+
+        foreach ($media as $g) {
+            $images[] .= $g->getFullUrl('mini');
+        }
+
+       return response()->json([
+            'url' => $images
+       ]);
     }
 
 
