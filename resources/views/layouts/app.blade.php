@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="app-url" content="{{ config('app.url') }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} | @yield('title', 'Transparent burglar bars in Cape Town')</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     {{-- <script language="JavaScript" defer src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script> --}}
