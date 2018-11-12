@@ -11,7 +11,7 @@
 
 ___
 
-{!! e(nl2br($message)) !!}
+{!! nl2br($message) !!}
 
 ___
 
