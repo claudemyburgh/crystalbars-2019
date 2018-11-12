@@ -33,3 +33,5 @@ Route::view('/quote', 'quote')->name('quote');
 Route::post('/send', 'SendMailController@send')->name('send');
 
 Route::post('/subscribe', 'MailChimpController@subscribe')->name('subscribe');
+
+Route::get('/getimages', 'PagesController@getImages')->name('getImages');

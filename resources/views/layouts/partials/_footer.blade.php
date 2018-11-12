@@ -13,7 +13,6 @@
     <div class="wrapper">
         <div class="row">
             <div class="md-col-4">
-                <h3>Gallery</h3>
                 <a href="{{ route('photos') }}">
                     <view-grid></view-grid>
                 </a>
